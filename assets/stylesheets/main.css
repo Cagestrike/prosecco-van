@@ -1,0 +1,345 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html, body {
+	width: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CUSTOM STYLES  */
+
+/* FONTS */
+html {
+    font-size: 16px;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+h1 { font-size: 5.063em }
+h2 { font-size: 3.375em }
+h3 { font-size: 2.25em }
+h4, h5 { font-size: 1.5em }
+
+/* FLEX RWD */
+
+.flex-container {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+/* GRID RWD */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.intro {
+    background: url("../images/header.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro p { font-size: 2.25em;}
+
+/* NAVIGATION */
+nav {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.primary-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2.4%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.primary-nav ul {
+    align-items: center; 
+}
+.primary-nav li {
+    display: inline-block;
+    padding: 0;
+}
+@media (min-width: 768px) {
+    .primary-nav li {
+        padding: 0 40px;
+    }
+}
+@media (min-width: 576px) {
+    .primary-nav li {
+        padding: 0 24px;
+    }
+}
+.logo img{
+    width: 75px;
+}
+
+/* SECTIONS */
+section {
+    padding: 64px 0;
+}
+section:last-child {
+    padding-bottom: 0;
+}
+
+/* SECTION ABOUT */
+#about {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.description {
+    text-align: center;
+    border: solid 1px silver;
+    padding: 1.6% 10%;
+}
+@media (min-width: 768px) {
+    #about {
+        width: 60%;
+    }
+}
+
+/* SECTION IMAGES */
+#photos {
+    width: 80%;
+    margin: 0 auto;
+    column-gap: 1.6%;
+    max-width: 1000px;
+}
+#photos img {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.img__wrap {
+    display: block;
+    position: relative;
+    margin: 1.6%;
+  }
+  
+  .img__description_layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.35);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .img__wrap:hover .img__description_layer {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .img__description {
+    transition: .2s;
+    transform: translateY(1em);
+  }
+  
+  .img__wrap:hover .img__description {
+    transform: translateY(0);
+  }
+@media (min-width: 768px) {
+    #photos {
+        width: 60%;
+    }
+}
+
+/* SECTION SERVICES */
+
+#services {
+    color: white;
+    background: url("../images/servicesbg.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    text-align: center;
+}
+#services .grid-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    grid-template-columns: none;
+}
+.service {
+    margin: 0 auto;
+    width: 75%;
+    padding: 16px 0;
+}
+
+.icon {
+    margin: 0 auto;
+    width: 66px;
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    #services .grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* TEAM */
+#team {
+    text-align: center;
+}
+
+.grid-item:nth-child(1) { grid-area: column-1;}
+.grid-item:nth-child(2) { grid-area: column-2;}
+.grid-item:nth-child(3) { grid-area: column-3;}
+.grid-item:nth-child(4) { grid-area: column-4;}
+
+#team .grid-container {
+    grid-template-columns: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 0;
+    grid-template-areas: "column-1" "column-3"
+                        "column-2" "column-4";
+    width: 75%;
+}
+
+.polaroid {
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+.avatar {
+    flex: 1;
+    margin: 0 2.4%;
+}
+
+.avatar img {
+	display: block;
+	width: 50%;
+	margin: 3% auto;
+}
+@media (min-width: 900px) {
+    #team .grid-container{
+        grid-template-columns: 1fr 1fr;
+        width: 75%;
+        grid-template-areas: "column-1 column-2"
+                             "column-3 column-4";
+    }
+}
+
+/* CONTACT */
+#contact h2, p { text-align: center; } 
+#contact {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    margin: 0 2.4%;
+}
+.form input, textarea {
+    width: 90%;
+    max-width: 400px;
+    max-height: 100px;
+}
+.form label {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .form {
+        width: 50%;
+    }
+    .form input, textarea {
+        width: 75%;
+    }
+}
+
+/* BUTTON */
+
+.btn {
+    color: beige;
+    border: 1px solid beige;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+.intro .btn {
+    margin-top: 10%;
+}
+
