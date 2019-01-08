@@ -127,13 +127,22 @@ a {
 /* HEADER */
 
 .intro {
-    background: url("../images/header.jpg") no-repeat 50% 50%;
+    background: url("../images/header.jpg") no-repeat 60% 50%;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     width: 100%;
     height: 100vh;
 }
-
+@media (min-width: 768px) {
+    .intro {
+        background-position: 50% 50%;
+    }
+}
+@media (min-width: 1200px) {
+    .intro {
+        background-attachment: fixed;
+    }
+}
 .welcome-container {
     position: absolute;
     bottom: 50%;
@@ -288,8 +297,13 @@ section:last-child {
     color: white;
     background: url("../images/servicesbg.jpg") no-repeat 50% 50%;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     text-align: center;
+}
+@media (min-width: 1200px) {
+    #services {
+        background-attachment: fixed;
+    }
 }
 #services .grid-container {
     margin: 0 auto;
