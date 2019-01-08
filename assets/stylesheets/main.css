@@ -51,7 +51,8 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 .short-border{
-    border-bottom: solid 5px silver;
+    /* border-bottom: solid 5px #d5edf6; */
+    border-bottom: solid 5px #96D2E9;
     margin: 24px auto;
     width: 10%;
 }
@@ -143,6 +144,8 @@ a {
 }
 
 .welcome-container .btn {
+    position: absolute;
+    top: 300px;
     width: 56px;
     text-align: center;
 }
@@ -171,6 +174,9 @@ nav {
     color: black;
     font-size: 0.8em;
     letter-spacing: 0.1em;
+}
+.primary-nav a:hover {
+    color: #96D2E9;
 }
 .primary-nav li {
     display: inline-block;
@@ -209,7 +215,7 @@ section:last-child {
 }
 .description {
     text-align: center;
-    border: solid 1px silver;
+    border: solid 1px #96D2E9;
     border-radius: 10px;
     padding: 1.6% 10%;
 }
@@ -369,10 +375,14 @@ section:last-child {
     justify-content: center;
     margin: 0 2.4%;
 }
+.form input {
+    height: 32px;
+}
 .form input, textarea {
     width: 90%;
     max-width: 400px;
     max-height: 100px;
+    background-color: #E0E0E0;
 }
 .form label {
     display: block;
@@ -390,12 +400,17 @@ section:last-child {
 /* BUTTON */
 
 .btn {
-    position: absolute;
-    top: 300px;
     color: beige;
     border: 1px solid beige;
     border-radius: 5px;
     padding: 8px 16px;
 }
+
+.btn:hover {
+    color: black;
+    background-color: white;
+}
+
+
 
 
