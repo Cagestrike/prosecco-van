@@ -343,7 +343,7 @@ section:last-child {
 
 .avatar img {
 	display: block;
-	width: 50%;
+    width: 70%;
 	margin: 3% auto;
 }
 @media (min-width: 900px) {
