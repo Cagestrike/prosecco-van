@@ -46,7 +46,15 @@ table {
 }
 
 /* CUSTOM STYLES  */
-
+body {
+    /* font-family: 'Lora', serif; */
+    font-family: 'Quicksand', sans-serif;
+}
+.short-border{
+    border-bottom: solid 5px silver;
+    margin: 24px auto;
+    width: 10%;
+}
 /* FONTS */
 html {
     font-size: 16px;
@@ -63,11 +71,28 @@ html {
     }
 }
 
-h1 { font-size: 5.063em }
-h2 { font-size: 3.375em }
-h3 { font-size: 2.25em }
-h4, h5 { font-size: 1.5em }
+h1 { 
+    font-size: 3em; 
+    font-weight: 300; 
+    color: beige; 
+    text-align: center; 
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+h2 { font-size: 3.375em; text-align: center; text-transform: uppercase; font-weight: 300; }
+h3 { font-size: 2.25em; text-transform: uppercase; font-weight: 300; }
+h4, h5 { font-size: 1.5em; text-align: center; }
 
+p {
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5.063em
+    }
+}
 /* FLEX RWD */
 
 .flex-container {
@@ -122,7 +147,7 @@ a {
     text-align: center;
 }
 
-.intro p { font-size: 2.25em;}
+.intro p { font-size: 2.25em; color: beige;}
 
 /* NAVIGATION */
 nav {
@@ -140,6 +165,12 @@ nav {
 }
 .primary-nav ul {
     align-items: center; 
+}
+.primary-nav a {
+    text-transform: uppercase;
+    color: black;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
 }
 .primary-nav li {
     display: inline-block;
@@ -169,6 +200,9 @@ section:last-child {
 
 /* SECTION ABOUT */
 #about {
+    background-color: #F5F5F5;
+}
+.about {
     width: 90%;
     margin: 0 auto;
     max-width: 1000px;
@@ -180,14 +214,14 @@ section:last-child {
     padding: 1.6% 10%;
 }
 @media (min-width: 768px) {
-    #about {
+    .about {
         width: 60%;
     }
 }
 
 /* SECTION IMAGES */
 #photos {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     column-gap: 1.6%;
     max-width: 1000px;
@@ -278,6 +312,9 @@ section:last-child {
 #team {
     text-align: center;
 }
+#team .description {
+    border: none;
+}
 
 .grid-item:nth-child(1) { grid-area: column-1;}
 .grid-item:nth-child(2) { grid-area: column-2;}
@@ -319,8 +356,11 @@ section:last-child {
 }
 
 /* CONTACT */
-#contact h2, p { text-align: center; } 
 #contact {
+    background-color: #F5F5F5;
+}
+.contact h2, p { text-align: center; } 
+.contact {
     max-width: 1200px;
     margin: 0 auto;
 }
