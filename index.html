@@ -205,18 +205,19 @@
                 na <a href="mailto:mail@mail.pl">mail@mail.pl</a></p><br>
             <p>Jeśli masz jakieś pytania zachęcamy również do kontaktu telefonicznego</p>
             <div class="form">
-                <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbyyYbn1lEke3j3nOFKepzQ1MC1NF3Hy-H4W2Ldc0CCGimC4Hlal/exec">
-                    <label>Imię i nazwisko*<br><input type="text" name="your-name" placeholder="Imię i nazwisko*"
+                <form class="gform" id="main-form" method="POST" action="https://script.google.com/macros/s/AKfycbyyYbn1lEke3j3nOFKepzQ1MC1NF3Hy-H4W2Ldc0CCGimC4Hlal/exec">
+                    <label>Imię i nazwisko*<br><input type="text" name="twoje-imie" placeholder="Imię i nazwisko*"
                             required></label><br>
-                    <label>Email*<br><input type="email" name="your-email" placeholder="Adres email*" required></label><br>
-                    <label>Termin imprezy*<br><input type="date" name="event-date" required></label><br>
-                    <label>Miejscowość (lokal), w którym odbędzie się impreza*<br><input type="text" name="event-place"
+                    <label>Email*<br><input type="email" name="adres-email" id="adres-email" placeholder="Adres email*" required></label><br>
+                    <label>Termin imprezy*<br><input type="date" name="data-eventu" id="data" required></label><br>
+                    <label>Miejscowość (lokal), w którym odbędzie się impreza*<br><input type="text" id="lokal" name="lokalizacja-eventu"
                             placeholder="Miejscowość (lokal)*" required></label><br>
-                    <label>Napisz coś więcej o swoim przyjęciu<br><textarea name="story" rows="6" cols="33"></textarea></label><br>
+                    <label>Napisz coś więcej o swoim przyjęciu<br><textarea name="cos-wiecej" id="wiecej" rows="6" cols="33"></textarea></label><br>
+                    <label id="blank" class="sr-only">Keep this field blank</label>
+                    <input id="honeypot" type="text" name="honeypot" value="" />
                     <input type="submit" value="Wyślij">
-                    <div class="thankyou_message">
-                        <!-- You can customize the thankyou message by editing the code below -->
-                        <h2><em>Dziękujemy</em> za kontakt z nami! Niedługo odpowiemy na twojego maila</h2>
+                    <div style="display:none" class="thankyou_message">
+                        <p class="thank-you-text"><em>Dziękujemy</em> za kontakt z nami! <br>Niedługo odpowiemy na twojego maila</p>
                     </div>
                 </form>
             </div>

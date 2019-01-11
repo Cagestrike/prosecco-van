@@ -184,7 +184,7 @@ nav {
 .primary-navigation a {
     text-transform: uppercase;
     color: black;
-    font-size: 0.75 em;
+    font-size: 0.75em;
     letter-spacing: 0.1em;
 }
 .primary-navigation a:hover {
@@ -406,6 +406,7 @@ section:last-child {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .form {
     display: flex;
     justify-content: center;
@@ -423,10 +424,13 @@ section:last-child {
 .form label {
     display: block;
 }
-
-.thankyou_message {
-    
+.thank-you-text {
+    text-align: left;
 }
+#honeypot, #blank {
+    display: none;
+}
+
 
 @media (min-width: 768px) {
     .form {
