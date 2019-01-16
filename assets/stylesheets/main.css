@@ -46,6 +46,9 @@ table {
 }
 
 /* CUSTOM STYLES  */
+/* html {
+    scroll-behavior: smooth;
+} */
 body {
     /* font-family: 'Lora', serif; */
     font-family: 'Quicksand', sans-serif;
@@ -257,6 +260,21 @@ section:last-child {
     border-radius: 50%;
 }
 
+#photos.grid-container {
+    grid-template-columns: 1fr 1fr;
+}
+#photos #logo, #photos a:nth-child(8), #photos a:nth-child(9) {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    #photos.grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #photos #logo, #photos a:nth-child(8), #photos a:nth-child(9) {
+        display: block;
+    }
+}
 .img__wrap {
     display: block;
     position: relative;
@@ -313,11 +331,7 @@ section:last-child {
 /* #services p {
     font-size: 20px;
 } */
-@media (min-width: 768px) {
-    #services h3 {
-        font-size: 1.7em;
-    }
-}
+
 
 @media (min-width: 1200px) {
     #services {
@@ -328,6 +342,12 @@ section:last-child {
     margin: 0 auto;
     max-width: 1200px;
     grid-template-columns: none;
+
+}
+@media (min-width: 768px) {
+    #services h3 {
+        font-size: 1.7em;
+    }
 }
 .service {
     margin: 0 auto;
@@ -367,7 +387,7 @@ section:last-child {
     padding: 24px 0;
     grid-template-areas: "column-1" "column-3"
                         "column-2" "column-4";
-    width: 75%;
+    width: 98%;
 }
 .polaroid h5 {
     padding-bottom: 12px;

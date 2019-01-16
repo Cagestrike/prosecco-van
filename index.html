@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/stylesheets/main.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
 
 <body>
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </a>
-        <img src="assets/images/logo.png">
+        <img id="logo" src="assets/images/logo.png">
         <a href="https://www.instagram.com/miloscibabelki/">
             <div class="img__wrap">
                 <img src="assets/images/img5.png">
@@ -208,7 +208,8 @@
                 <form class="gform" id="main-form" method="POST" action="https://script.google.com/macros/s/AKfycbyyYbn1lEke3j3nOFKepzQ1MC1NF3Hy-H4W2Ldc0CCGimC4Hlal/exec">
                     <label>Imię i nazwisko*<br><input type="text" name="twoje-imie" placeholder="Imię i nazwisko*"
                             required></label><br>
-                    <label>Email*<br><input type="email" name="adres-email" id="adres-email" placeholder="Adres email*" required></label><br>
+                    <label>Email*<br><input type="email" name="adres-email" id="adres-email" placeholder="Adres email*"
+                            required></label><br>
                     <label>Termin imprezy*<br><input type="date" name="data-eventu" id="data" required></label><br>
                     <label>Miejscowość (lokal), w którym odbędzie się impreza*<br><input type="text" id="lokal" name="lokalizacja-eventu"
                             placeholder="Miejscowość (lokal)*" required></label><br>
@@ -217,7 +218,8 @@
                     <input id="honeypot" type="text" name="honeypot" value="" />
                     <input type="submit" value="Wyślij">
                     <div style="display:none" class="thankyou_message">
-                        <p class="thank-you-text"><em>Dziękujemy</em> za kontakt z nami! <br>Niedługo odpowiemy na twojego maila</p>
+                        <p class="thank-you-text"><em>Dziękujemy</em> za kontakt z nami! <br>Niedługo odpowiemy na
+                            twojego maila</p>
                     </div>
                 </form>
             </div>
@@ -233,6 +235,9 @@
         <p class="copyright">Miłość i bąbelki &copy; 2019<br>Damian Ciechan</p>
     </footer>
     <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 </body>
 
 </html>
